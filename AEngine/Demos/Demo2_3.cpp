@@ -8,6 +8,7 @@
 
 #define  WINDOW_CLASS_NAME="WINCLASS1"
 
+// 消息回调方法
 LRESULT CALLBACK WinProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);
 
 
@@ -15,7 +16,6 @@ LRESULT CALLBACK WinProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
 
-	MessageBox(NULL, "message....", "Msg", MB_OK | MB_ICONEXCLAMATION);
 
 	return 0;
 }
