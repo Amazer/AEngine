@@ -9,4 +9,5 @@ test/*
 *.pdb
 *.tlog
 *.lastbuildstate
+*.log
 
