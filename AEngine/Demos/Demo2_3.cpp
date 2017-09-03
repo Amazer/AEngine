@@ -11,6 +11,8 @@
 // 消息回调方法
 LRESULT CALLBACK WinProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);
 
+void Game_Main();
+
 
 // 所有Windows程序的入口
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
@@ -58,14 +60,38 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	ShowWindow(hwnd, nShowCmd);
 
-	UpdateWindow(hwnd);			//将一条WM_PAINT发送给窗口，以刷新其内容
+//	UpdateWindow(hwnd);			//将一条WM_PAINT发送给窗口，以刷新其内容
 
-	while (GetMessage(&msg,NULL,0,0))
+	// get message 是需要等待，有事件才返回
+
+	//	while (GetMessage(&msg,NULL,0,0))
+	//	{
+	//		TranslateMessage(&msg);		//加速转换消息
+	//
+	//		DispatchMessage(&msg);		//分发消息
+	//	}
+	
+	// --------------------------------
+
+	// use PeekMessage，如果有消息才处理
+
+	while (true)
 	{
-		TranslateMessage(&msg);		//加速转换消息
+		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+		{
+			if (msg.message == WM_QUIT)
+			{
+				break;
+			}
 
-		DispatchMessage(&msg);		//分发消息
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+
+		}
+
+		Game_Main();
 	}
+	// --------------------------------
 
 	return msg.wParam;
 }
@@ -101,3 +127,8 @@ LRESULT CALLBACK WinProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
 	return (DefWindowProc(hwnd, msg, wparam, lparam));
 }		//end WinProc
+
+void Game_Main()
+{
+
+}
