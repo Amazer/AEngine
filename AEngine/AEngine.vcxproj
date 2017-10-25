@@ -21,9 +21,11 @@
   <ItemGroup>
     <ClCompile Include="Demos\t3dconsolealpha1.cpp" />
     <ClCompile Include="t3dlib1.cpp" />
+    <ClCompile Include="t3dlib2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="t3dlib1.h" />
+    <ClInclude Include="t3dlib2.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
