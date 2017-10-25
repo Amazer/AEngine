@@ -18,5 +18,13 @@
     <ClCompile Include="Demos\t3dconsolealpha1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="t3dlib1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="t3dlib1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
