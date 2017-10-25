@@ -24,12 +24,18 @@
     <ClCompile Include="t3dlib2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="t3dlib3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="t3dlib1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="t3dlib2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="t3dlib3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
